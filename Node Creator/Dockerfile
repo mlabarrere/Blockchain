@@ -27,9 +27,6 @@ EXPOSE 33445
 # Copy binaries to image's /bin/ repository
 COPY bin/* /bin/
 
-# Copy data to image's /data_ey/ repository
-COPY data_ey/ /
-
 # Copy binaries to image's /bin/ repository
 COPY src/* /
 
@@ -104,11 +101,6 @@ EXPOSE 8080
 
 # will be used by attached slave agents:
 EXPOSE 8102
-
-RUN ./build03_cakeshop_setup.sh
-
-# entrypoint script can't use variables, so install to /usr/local/bin
-COPY src/ey_CAT_start.sh /ey_CAT_start.sh
 
 RUN apt-get -y autoclean && apt-get -y clean
 
