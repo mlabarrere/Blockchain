@@ -41,4 +41,4 @@ apt-get update
 
 apt-get install -y docker-ce jq
 
-docker build -t ey/quorum .
+docker build -t perso/quorum .
